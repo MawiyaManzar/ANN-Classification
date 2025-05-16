@@ -35,7 +35,7 @@ has_cr_card = st.selectbox('Has Credit Card', [0, 1], format_func=lambda x: 'Yes
 is_active_member = st.selectbox('Is Active Member', [0, 1], format_func=lambda x: 'Yes' if x == 1 else 'No', help='Indicate if the customer is an active member (0 = No, 1 = Yes).')
 
 # Prepare the input data
-input_data =.pd.DataFrame({
+input_data =pd.DataFrame({
     'CreditScore': [credit_score],
     'Gender': [label_encoder_gender.transform([gender])[0]],
     'Age': [age],
